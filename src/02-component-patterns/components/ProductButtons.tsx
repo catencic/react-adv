@@ -7,9 +7,10 @@ import styles from "../styles/styles.module.css";
 export interface PropsButtonProps {
   className? : string;
   style?: React.CSSProperties;
+
 }
 
-export const ProductButtons = ({className , style} : PropsButtonProps ) => {
+export const ProductButtons = ({className , style } : PropsButtonProps ) => {
 
     const {increaseBy , counter} = useContext(ProductContext);
 

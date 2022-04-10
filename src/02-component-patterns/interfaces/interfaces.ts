@@ -27,3 +27,13 @@ import { PropsProductCard } from "../components/ProductCard";
     Buttons: (Props : PropsButtonProps) => JSX.Element
     
   }
+
+
+  export interface onChangeArg {
+    product: Product;
+    count: number;
+  }
+
+  export interface ProductInCart extends Product {
+    count: number;
+  }
