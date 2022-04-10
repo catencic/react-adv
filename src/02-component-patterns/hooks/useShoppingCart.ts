@@ -22,7 +22,7 @@ asi luce el shoping state
   const onProductCountChange = ({count,product}: { count: number ,product: Product}) => {
     setShoppingCart((oldShoppingCart) => {
       // si existe un product ese voy a tomar, si no creo el objeto
-      const productInCart: ProductInCart = oldShoppingCart[product.id] || {
+    /*   const productInCart: ProductInCart = oldShoppingCart[product.id] || {
         ...product,
         count: 0,
       };
@@ -34,15 +34,15 @@ asi luce el shoping state
           ...oldShoppingCart,
           [product.id]: productInCart,
         };
-      }
+      } */
 
       // si no entra al if anterior hay que eliminar el producto, porque el count llego a 0
 
-      const { [product.id]: toDelete, ...rest } = oldShoppingCart;
+      /* const { [product.id]: toDelete, ...rest } = oldShoppingCart;
 
-      return rest;
+      return rest; */
 
-      /* if (count === 0) {
+      if (count === 0) {
         const { [product.id]: toDelete, ...rest } = oldShoppingCart;
 
         return rest;
@@ -51,7 +51,7 @@ asi luce el shoping state
       return {
         ...oldShoppingCart,
         [product.id]: { ...product, count },
-      }; */
+      };
     });
 }
 
