@@ -13,3 +13,5 @@ const product1 = {
   };
 
   export const products: Product[] = [product1, product2];
+
+  

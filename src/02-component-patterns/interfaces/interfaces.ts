@@ -18,6 +18,7 @@ import { PropsProductCard } from "../components/ProductCard";
       counter: number;
       increaseBy: (value: number)=> void;
       product: Product;
+      maxCount?: number;
   }
 
   export interface ProductCardHOCProps {
@@ -36,4 +37,9 @@ import { PropsProductCard } from "../components/ProductCard";
 
   export interface ProductInCart extends Product {
     count: number;
+  }
+
+  export interface InitialValues {
+    count?: number;
+    maxCount?: number;
   }
